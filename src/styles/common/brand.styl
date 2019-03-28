@@ -1,0 +1,73 @@
+.block__brand-day
+    display flex
+    margin-top 80px
+    +adapt(1200px)
+        display block
+.brand-day__right,
+.brand-day__left
+    width 50%
+    height 590px
+    display flex
+    flex-direction column
+    justify-content: center
+    align-items center
+    +adapt(1200px)
+        width 100%
+        height 390px
+.brand-day__left
+    background-image: url('../images/left_bckg.png')
+    background-size cover
+    background-repeat no-repeat
+.brand-day__right
+    background-image: url('../images/bg-contacts.png')
+    background-color #EBF7F9
+    background-size cover
+    background-repeat no-repeat  
+.wrap-img
+    width 420px
+    height 180px
+    +adapt(1200px)
+        width 350px
+        height 130px
+    +adapt(480px)
+        width 100%
+.brand-day-img
+    display inline-block
+    max-width 100%
+    height 100%
+.brand-day__button
+    width 320px
+    height 50px
+    margin-top 50px
+    position relative
+    z-index 10
+    +adapt(1200px)
+        width 350px
+    +adapt(480px)
+        width 90%
+        height 45px
+.brand-day__button--link--right,
+.brand-day__button--link--left
+    display flex
+    justify-content: center
+    align-items center
+    width 100%
+    height 100%
+    border-radius 50px
+    font-family 'DINProM'
+    font-size 24px
+    color #000000
+    tran()
+    background-color transparent 
+    +adapt(480px)
+        font-size 22px
+.brand-day__button--link--right
+    border 3px solid red
+    &:hover
+        background-color red
+        color #fff
+.brand-day__button--link--left  
+    border 3px solid #F28D21
+    &:hover
+        background-color #F28D21
+        color #fff
