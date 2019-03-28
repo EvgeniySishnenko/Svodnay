@@ -13,7 +13,6 @@ function menuMobile () {
             }
 
             $('body,html').animate({ scrollTop: $(elem).offset().top }, 500); 
-
         }
     });
     function getCurrentZone(from) {
