@@ -92,9 +92,9 @@
 .slider
     position relative
     z-index 20
-    width 100%
-    // margin-bottom 80px
-    
+    max-width 1200px
+    width auto
+    margin 0 auto
 .wrap_controls
     height 100px
     position relative 
@@ -122,7 +122,7 @@
     padding 30px 0 0 80px
     position relative
     +adapt(1200px)
-         padding 30px 0 0 40px
+        padding 30px 0 0 40px
     +adapt(768px)
         order 1
         padding 10px gap_mob 0 0
@@ -168,61 +168,110 @@
 .slider__link
     display flex
     justify-content center
-    
+    position relative
+    width 100%
+    height 100%
+.slider-content__icon
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    fill: #E41E0A
+    +adapt(480px)
+        width 80px
+        height 50px
+.wrap__slider-svg
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    background-color white
 .slider__image
     display block
     max-width 100%
-   
 .one-slide
-    +adapt(600px)
-        height 400px   
-    +adapt(480px)
-        height 300px
-     +adapt(320px)
-        height 250px
-    .slider__link
-        +adapt(600px)
-            height 400px  
-        +adapt(480px)
+    .slider__image
+        +adapt(650px)
+            height 400px
+        +adapt(550px)
             height 300px
-        +adapt(320px)
+        +adapt(420px)
             height 250px
+        +adapt(375px)
+            height 230px
+    .wrap__slider-svg
+        width 60px
+        height 40px
+        +adapt(550px)
+            width 40px
+            height 30px
+    .slider-content__icon
+        width 100px
+        height 80px
+        +adapt(550px)
+            width 70px
+            height 50px
 .two-slides
     width 100%
-    +adapt(1200px)
-        height 350px
+   
     +adapt(768px)
         .wrap__slider-content
             display block
-        height 430px
-    +adapt(600px)
-        height 400px 
-    +adapt(480px)
-        height 350px
-    +adapt(375px)
-        height 300px
-    +adapt(320px)
-        height 250px
+       
+    .wrap__slider-svg
+        width 40px
+        height 35px
+        +adapt(1200px)
+            width 40px
+            height 30px
+        +adapt(768px)
+            width 40px
+            height 30px
+        
     .slider__link
         width 49%
         margin-right 2%
         &:last-child 
             margin-right 0
-        +adapt(1200px)
-            height 350px
         +adapt(768px)
             width 100%
             margin-right 0
-            height 350px
-            height auto
             margin-top 10px
             &:first-child 
                 margin-top 0
-        +adapt(600px)
-            height 400px    
-        +adapt(480px)
+    .slider-content__icon
+        width 100px
+        height 80px
+        +adapt(1440px)
+            width 80px
+            height 60px
+        +adapt(1200px)
+            width 70px
+            height 50px
+       
+    .slider__image
+        height 450px
+        +adapt(1440px)
+            height 410px
+        +adapt(1250px)
             height 350px
-        +adapt(375px)
+        +adapt(1100px)
+            height 320px
+        +adapt(1024)
+            height 280px
+        +adapt(900px)
+            height 270px
+        +adapt(768px)
+            height 350px
+        +adapt(550px)
+            height 370px    
+        +adapt(480px)
+            height 340px
+        +adapt(440px)
             height 300px
-        +adapt(320px)
+        +adapt(400px)
+            height 280px
+        +adapt(375px)
             height 250px
+        +adapt(320px)
+            height 230px

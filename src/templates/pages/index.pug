@@ -3,13 +3,13 @@ extends ../template
 block variables
     - var title = 'Brand Day'
 
-block content 
+block content
     include ../common/header.pug
     section.section.section__first-screen#about
         .container
             include ../common/menu.pug
             include ../common/brand.pug
-    section.section.section__project#project
+    section.section.section__project
         include ../section/section_project.pug
     section.section.section__story#story
         include ../section/section_story.pug
@@ -21,5 +21,3 @@ block content
         -for(let i = 0; i < 6; i++) {
             span
         -}
-
-                
