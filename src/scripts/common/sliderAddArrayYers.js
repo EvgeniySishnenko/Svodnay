@@ -1,5 +1,5 @@
 function sliderAddArrayYers () {
-    let arr = ['2017', '2018', '2019'];
+    let arr = ['2019', '2018', '2017'];
 
     document.querySelectorAll('ul.slick-dots > li').forEach( (e, i) => {
         let span =  document.createElement('span');
