@@ -7,9 +7,9 @@ function menuMobile () {
 
         if($(elem).length != 0) {
 
-            if($('.block__menu').hasClass('block__menu--active')) {
+            if($('.menu__mobile').hasClass('menu__mobile--show')) {
                 $('#nav-icon2').removeClass('open');
-                $('.block__menu').removeClass('block__menu--active');
+                $('.menu__mobile').removeClass('menu__mobile--show');
             }
 
             $('body,html').animate({ scrollTop: $(elem).offset().top }, 500); 

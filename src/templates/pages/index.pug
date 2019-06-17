@@ -1,11 +1,11 @@
 extends ../template
 
 block variables
-    - var title = 'Brand Day'
+    - var title = 'День Бренда'
 
 block content
     include ../common/header.pug
-    section.section.section__first-screen#about
+    section.section.section__first-screen
         .container
             include ../common/menu.pug
             include ../common/brand.pug
@@ -21,3 +21,6 @@ block content
         -for(let i = 0; i < 6; i++) {
             span
         -}
+    .menu__mobile
+        .menu__mobile-animate
+            include ../common/menu.pug

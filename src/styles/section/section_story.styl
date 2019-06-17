@@ -14,6 +14,8 @@
         background-repeat no-repeat
         background-size: 100%
         z-index 5
+        +adapt(1440px)
+            top 30px
         +adapt(480px)
             display none
     &:before
@@ -21,18 +23,18 @@
         display block
         position absolute
         z-index -10
-        top 100px
-        left 150px
+        top 50px
+        left 180px
         width 90px
         height 390px
         background-image: url('../images/text.png')
         background-repeat no-repeat
         background-size: 100%
-        z-index 5
-        +adapt(1400px)
+        z-index 0
+        +adapt(1440px)
             display none
 .block__story
-    padding 150px 160px
+    padding 100px 160px
     background-color #FB454B
     &:after
         content ''
@@ -47,7 +49,7 @@
         background-repeat no-repeat
         background-size: 100%
         z-index 5
-        +adapt(480px)
+        +adapt(1024px)
             display none
     &:before
         content ''
@@ -94,7 +96,11 @@
     z-index 20
     max-width 1200px
     width auto
-    margin 0 auto
+    margin 70px auto
+    // +adapt(1440px)
+    //     margin 70px auto
+    +adapt(992px)
+        margin 40px auto
 .wrap_controls
     height 100px
     position relative 
@@ -156,6 +162,9 @@
     font-family 'DINProB'
     color #ffffff
     font-size 24px
+    tran(color, .4s)
+    &:hover
+        color #fb454b
     +adapt(1200px)
         font-size 18px
 .slider__list
@@ -169,7 +178,7 @@
     display flex
     justify-content center
     position relative
-    width 100%
+    // width 100%
     height 100%
 .slider-content__icon
     position absolute
@@ -189,57 +198,31 @@
 .slider__image
     display block
     max-width 100%
-.one-slide
-    .slider__image
-        +adapt(650px)
-            height 400px
-        +adapt(550px)
-            height 300px
-        +adapt(420px)
-            height 250px
-        +adapt(375px)
-            height 230px
-    .wrap__slider-svg
-        width 60px
-        height 40px
-        +adapt(550px)
-            width 40px
-            height 30px
-    .slider-content__icon
-        width 100px
-        height 80px
-        +adapt(550px)
-            width 70px
-            height 50px
-.two-slides
-    width 100%
-   
+    +adapt(1440px)
+        height 410px
+    +adapt(1250px)
+        height 350px
+    +adapt(1100px)
+        height 320px
+    +adapt(1024)
+        height 280px
+    +adapt(900px)
+        height 270px
     +adapt(768px)
-        .wrap__slider-content
-            display block
-       
-    .wrap__slider-svg
-        width 40px
-        height 35px
-        +adapt(1200px)
-            width 40px
-            height 30px
-        +adapt(768px)
-            width 40px
-            height 30px
-        
-    .slider__link
-        width 49%
-        margin-right 2%
-        &:last-child 
-            margin-right 0
-        +adapt(768px)
-            width 100%
-            margin-right 0
-            margin-top 10px
-            &:first-child 
-                margin-top 0
-    .slider-content__icon
+        height 350px
+    +adapt(550px)
+        height 370px    
+    +adapt(480px)
+        height 340px
+    +adapt(440px)
+        height 300px
+    +adapt(400px)
+        height 280px
+    +adapt(375px)
+        height 250px
+    +adapt(320px)
+        height 230px
+.slider-content__icon
         width 100px
         height 80px
         +adapt(1440px)
@@ -248,30 +231,31 @@
         +adapt(1200px)
             width 70px
             height 50px
-       
-    .slider__image
-        height 450px
-        +adapt(1440px)
-            height 410px
-        +adapt(1250px)
-            height 350px
-        +adapt(1100px)
-            height 320px
-        +adapt(1024)
-            height 280px
-        +adapt(900px)
-            height 270px
+.wrap__slider-svg
+    width 40px
+    height 35px
+    +adapt(1200px)
+        width 40px
+        height 30px
+    +adapt(768px)
+        width 40px
+        height 30px
+.two-slides
+    width 100%
+    +adapt(768px)
+        .wrap__slider-content
+            display block
+    .slider__link
+        width 49%
+        margin-right 1%
+        &:last-child 
+            margin-right 0
         +adapt(768px)
-            height 350px
-        +adapt(550px)
-            height 370px    
-        +adapt(480px)
-            height 340px
-        +adapt(440px)
-            height 300px
-        +adapt(400px)
-            height 280px
-        +adapt(375px)
-            height 250px
-        +adapt(320px)
-            height 230px
+            width 99%
+            margin-right 0
+            margin-top 10px
+            &:first-child 
+                margin-top 0
+    
+       
+    

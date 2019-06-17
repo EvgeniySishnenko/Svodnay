@@ -1,5 +1,5 @@
 .section__contancts
-    padding 150px 160px 80px
+    padding 100px 160px gap
     background-color black
     position relative
     overflow hidden
@@ -7,16 +7,16 @@
         content ''
         display block
         position absolute
-        top 70px
-        left 150px
+        top 40px
+        left 180px
         width 90px
         height 300px
         background-image: url('../images/contacts.png')
         background-repeat no-repeat
         background-size: 100%
-        z-index 10
+        z-index 0
         opacity 0.5
-        +adapt(1020px)
+        +adapt(1440px)
             display none
     &:after
         content ''
@@ -29,30 +29,25 @@
         background-image: url('../images/cont-circk.png')
         background-repeat no-repeat
         background-size: 100%
-        z-index 5
+        z-index 0
         opacity 0.5
         +adapt(768px)
             display none
     +adapt(1400px)
-        padding 100px 100px 80px
+        padding 100px 100px 40px
     +adapt(992px)
-        padding 40px 20px 40px
+        padding 40px 20px gap_mob
     +adapt(768px)
-        padding 40px gap_mob 40px
+        padding 40px gap_mob gap_mob
 .block__contacts--style-color
     color pink
 .block__contacts
     display flex
     justify-content center
-    margin-top 280px
-    +adapt(1400px)
-        margin-top 200px
+    margin-top 30px
+    position relative
+    z-index: 10
     +adapt(1200px)
-        margin-top 120px
-    +adapt(992px)
-        margin-top 80px
-    +adapt(768px)
-        margin-top 50px
         flex-direction column
         align-items: center
     &:after
@@ -66,40 +61,32 @@
         background-image: url('../images/cont-circk.png')
         background-repeat no-repeat
         background-size: 100%
-        z-index 5
+        z-index -1
         opacity 0.5
 .contacts__left
-    width 40%
-    border-right 1px solid #707070
-    padding 80px 0
+    width 35%
     +adapt(1440px)
-        width 50%
-    +adapt(992px)
-        border-right none
-    +adapt(768px)
-        padding 0
-        width 80%
+        // width 40%
+    +adapt(1200px)
+        width 100%
         order 2
         margin-top 30px
 .contacts__list
-    border-left 1px solid #707070
-    padding 0 50px 0
+    border-right 1px solid #707070
+    padding 0 50px 0 0
+    +adapt(1440px)
+        border-right none
     +adapt(1200px)
-        padding 0 10px 0 30px
-    +adapt(992px)
-        border-left none
-    +adapt(768px)
         padding 0
-
 .contacts__item
-    margin-top 80px
+    margin-top 30px
     &:first-child
         margin-top 0
-    +adapt(768px)
-        margin-top 20px
+    +adapt(1200px)
+        margin-top 10px
 .contacts-key
     font-family 'DINPro'
-    color #E41E0A
+    color #fb454b
     font-size 24px
     +adapt(768px)
         font-size 18px
@@ -110,22 +97,21 @@
     +adapt(768px)
         font-size 18px
 .contacts__right
-    width 60%
-    padding 80px 300px
-    +adapt(1440px)
-        width 50%
-        padding 80px 150px
-    +adapt(1024px)
-        padding 80px 50px
-    +adapt(768px)
-        padding 0 
-        width 80%
+    width 65%
+    display flex
+    justify-content center
+    align-items center
+    +adapt(1200px)
+        width 100%
+        justify-content flex-start
         order 1
-.contacts__pic
-    +adapt(480px)
-        display flex
-        justify-content center
-        align-items: center
+    +adapt(768px)
+        display block
+
+.contacts__descr
+    margin-left 40px
+    +adapt(768px)
+        margin-left 0
 .contacts__name
     +adapt(768px)
         margin-top 20px
@@ -134,7 +120,7 @@
         text-transform uppercase
         font-family 'DINProB'
         font-size 27px
-        color #E41E0A
+        color #fb454b
         +adapt(768px)
             font-size 23px
             display inline

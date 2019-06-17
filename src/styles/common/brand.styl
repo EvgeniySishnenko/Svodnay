@@ -1,6 +1,6 @@
 .block__brand-day
     display flex
-    margin-top 50px
+    margin-top 20px
     +adapt(1200px)
         display block
 .brand-day__right,
@@ -59,18 +59,27 @@
     border-radius 50px
     font-family 'DINProM'
     font-size 24px
-    color #000000
-    tran()
-    background-color transparent 
+    // color #000000
+    color white
+    // tran(all, .4s)
+    // background-color transparent 
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    &:hover
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        
     +adapt(480px)
         font-size 22px
 .brand-day__button--link--right
-    border 3px solid red
-    &:hover
-        background-color red
-        color #fff
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); 
 .brand-day__button--link--left  
-    border 3px solid #F28D21
-    &:hover
-        background-color #F28D21
-        color #fff
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+
+     

@@ -8,11 +8,12 @@ const $ = require("jquery");
 const jQuery = require("jquery");
 window.jQuery = $;
 const fancybox = require("@fancyapps/fancybox");
-
+const scrollAnimate = require("./common/scrollAnimate");
 if(document.querySelector('.wrapper')) {
     slick();
     sliderAddArrayYers();
     menuMobile();
     showMenuMobile();
     fancyboxShow();
+    scrollAnimate();
 }

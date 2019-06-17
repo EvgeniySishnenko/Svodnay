@@ -1,11 +1,11 @@
 .container__story
     .block__story
-        .block__title
+        .block__title.bounceInLeft.animatable
             h2.h2__title Как это было
-        .story__description
+        //- .story__description
             include ../data/story_text.pug
         .slider
-            .wrap_controls
+            .wrap_controls.animatable.fadeInDown
                 .controls-left
                 .controls-right
                     .controls-right--item
@@ -14,30 +14,30 @@
                     .controls-right--item
                         .right--item-archive Архив
                         a(href="https://brandday.ru/dbd2019/" target="_blank").right--item-link Digital Brand Day
-            ul.slider__list
+            ul.slider__list.animatable.moveUp
                 li.slider__item.one-slide
                     .wrap__slider-content
                         a.slider__link.group(href="https://www.youtube.com/watch?v=iaxVSQtSNzs&autoplay=0&feature=youtu.be")
-                            img(src="//img.youtube.com/vi/iaxVSQtSNzs/0.jpg").slider__image
+                            img(src="assets/images/slider/2019.jpg").slider__image
                             .wrap__slider-svg
                                 svg.slider-content__icon
                                     use(xlink:href="assets/sprite/sprite.svg#youtube-logo")
                 li.slider__item.two-slides
                     .wrap__slider-content
                         a.slider__link.group(href="https://www.youtube.com/watch?v=hmGpmnf9cCE&autoplay=0&feature=youtu.be" )
-                            img(src="//img.youtube.com/vi/hmGpmnf9cCE/sddefault.jpg").slider__image
+                            img(src="assets/images/slider/2018_1.jpg").slider__image
                             .wrap__slider-svg
                                 svg.slider-content__icon
                                     use(xlink:href="assets/sprite/sprite.svg#youtube-logo")
                         a.slider__link.group(href="https://www.youtube.com/watch?v=YAtKS4gA-Gs&autoplay=0&feature=youtu.be")
-                            img(src="//img.youtube.com/vi/YAtKS4gA-Gs/sddefault.jpg").slider__image
+                            img(src="assets/images/slider/2018_2.jpg").slider__image
                             .wrap__slider-svg
                                 svg.slider-content__icon
                                     use(xlink:href="assets/sprite/sprite.svg#youtube-logo")              
                 li.slider__item.one-slide
                     .wrap__slider-content
                         a.slider__link.group(href="https://www.youtube.com/watch?v=hfCjM4ze1m8&autoplay=0&feature=youtu.be")
-                            img(src="//img.youtube.com/vi/hfCjM4ze1m8/sddefault.jpg").slider__image
+                            img(src="assets/images/slider/2017.jpg").slider__image
                             .wrap__slider-svg
                                 svg.slider-content__icon
                                     use(xlink:href="assets/sprite/sprite.svg#youtube-logo")

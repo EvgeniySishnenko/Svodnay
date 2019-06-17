@@ -1,13 +1,13 @@
 function showMenuMobile () {
     $('#nav-icon2').on('click', ()=> {
         $('#nav-icon2').toggleClass('open');
-        $('.block__menu').toggleClass('block__menu--active');
+        $('.menu__mobile').toggleClass('menu__mobile--show');
     });
     window.addEventListener("resize", function () {
         
         if (innerWidth > 992) {
             $('#nav-icon2').removeClass('open');
-            $('.block__menu').removeClass('block__menu--active');
+            $('.menu__mobile').removeClass('menu__mobile--show');
         }
     }, false);
 

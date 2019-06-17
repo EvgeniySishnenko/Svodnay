@@ -4,11 +4,15 @@
     justify-content center
     +adapt(992px)
         margin-top 0
+.block__menu
+    +adapt(992px)
+        display none
 .header__menu
     position relative
 .header__menu--list
     display flex
     justify-content center
+    
 .header__menu--item
     margin-right 140px
     &:last-child
@@ -28,9 +32,25 @@
     font-family 'DINProM'
     font-size 33px
     color #707070
-    tran(color)
+    tran(all, .3s)
+    position relative
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 2px
+        background-color red
+        bottom -5px
+        right  0
+        opacity 0
+        tran(all, .3s)
     &:hover
         color red
+        .header__menu--link-num
+            bottom 0
+        &:after
+            bottom 0
+            opacity 1
     +adapt(1200px)
         font-size 28px
      +adapt(992px)
@@ -41,29 +61,50 @@
     margin-right 10px
     position relative
     bottom -5px
-.block__menu
-    position relative
-    +adapt(992px)
-        display none
-.block__menu--active
-    display block
-    position fixed
+    tran(bottom, .3s)
+    
+.menu__mobile
+    position: fixed
+    height 100%
     top 0 
     left 0
-    right 0
+    width 100%
+    height 0
+    z-index -1
+    .block__menu
+        display: none
+.menu__mobile-animate
+    height 100%
+    width 100%
+    position absolute
+    top 0
+    left 0
     bottom 0
-    z-index 50
+    opacity 0
+    background: #ff920a; /* Old browsers */
+    background: -moz-linear-gradient(left, #ff920a 3%, #ffaf4b 82%)
+    background: -webkit-linear-gradient(left, #ff920a 3%,#ffaf4b 82%)
+    background: linear-gradient(to right, #ff920a 3%,#ffaf4b 82%)
+    opacity 0.9
+    z-index -1
+    transition transform 0.5s
+    transform-origin 0 0
+    transition-timing-function cubic-bezier(0.5,1.6,0.4,0.7)
+    transform scaleY(0)
+.menu__mobile--show
+    z-index 90
     +adapt(992px)
-        display block
-        background: #ff920a; /* Old browsers */
-        background: -moz-linear-gradient(left, #ff920a 3%, #ffaf4b 82%)
-        background: -webkit-linear-gradient(left, #ff920a 3%,#ffaf4b 82%)
-        background: linear-gradient(to right, #ff920a 3%,#ffaf4b 82%)
-        .header__menu
+        height 100%
+        .block__menu
+            display: block
             position absolute
             top 260px
             left 10%
-            transform translateY(-50%)
+            transform translateY(-50%)   
         .header__menu--list
             display block
-
+        .menu__mobile-animate
+            // height 100%
+            z-index 10   
+            transform scaleY(1)   
+    
